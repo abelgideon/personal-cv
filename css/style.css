@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
 
-* {
+*:not(i) {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -162,4 +162,41 @@ tr:nth-of-type(2n) {
 .tech-paragraph {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  border: none;
+}
+
+.social-cards {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  font-size: 2rem;
+}
+
+.divider {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.social-card {
+  color: inherit;
+  text-decoration: none;
 }
