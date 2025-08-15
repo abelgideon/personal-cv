@@ -200,3 +200,56 @@ button[type="submit"] {
   color: inherit;
   text-decoration: none;
 }
+
+@media (min-width: 768px) {
+  .paragraph-group {
+    flex-direction: row;
+  }
+
+  .about-paragraph {
+    width: 50%;
+  }
+
+  .card-collection {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .project-collection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+
+  #home-paragraph {
+    font-size: 1.1rem;
+  }
+
+  #home-header {
+    font-size: 5.5rem;
+  }
+
+  #home-main {
+    width: 40%;
+  }
+
+  button[type="submit"] {
+    width: fit-content;
+  }
+
+  form {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  label {
+    font-size: 1.2rem;
+    display: block;
+  }
+
+  .icons {
+    font-size: 3rem;
+  }
+
+  .social-cards {
+    gap: 1rem;
+  }
+}
