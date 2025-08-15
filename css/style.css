@@ -42,13 +42,14 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   list-style-type: none;
 }
 
 .nav-links {
   text-decoration: none;
   color: white;
+  font-size: 1.2rem;
 }
 
 #home-header {
@@ -103,6 +104,7 @@ nav ul {
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  text-align: center;
 }
 
 .card-collection {
@@ -134,4 +136,24 @@ tr:nth-of-type(2n) {
 .table-container {
   max-width: 100%;
   overflow-x: auto;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-collection li::marker {
+  font-size: 2rem;
+}
+
+.project-collection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.tech-paragraph {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
