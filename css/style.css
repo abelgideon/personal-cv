@@ -328,3 +328,20 @@ button[type="submit"] {
     gap: 1rem;
   }
 }
+
+@media print {
+  nav,
+  .button-container,
+  img,
+  .social-cards {
+    display: none;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  main {
+    max-width: 100%;
+    width: auto;
+  }
+}
