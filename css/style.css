@@ -270,6 +270,7 @@ button[type="submit"] {
   .nav-links,
   #toggle-label img {
     display: inline-block;
+    cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
   }
 
