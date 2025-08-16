@@ -19,6 +19,7 @@
 
 /* Reset Properties */
 *:not(i) {
+  /* not(i) allows us not to affect fontawesome icons which disappear when font-family is changed */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
