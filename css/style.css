@@ -85,6 +85,11 @@ nav ul {
   color: var(--text-color);
 }
 
+.nav-links.active {
+  color: #f43098;
+  border-bottom: 2px solid #f43098;
+}
+
 #home-header {
   font-size: 3rem;
 }
@@ -238,10 +243,32 @@ button[type="submit"] {
   nav ul {
     gap: 30px;
   }
+  .nav-links,
+  #toggle-label img {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .nav-links:hover,
+  #toggle-label img:hover {
+    transform: translateY(-3px);
+    color: #f43098;
+  }
+
+  .green-btn,
+  .purple-btn,
+  .social-card {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .green-btn:hover,
+  .purple-btn:hover,
+  .social-card:hover {
+    transform: scale(1.04);
+  }
   .paragraph-group {
     flex-direction: row;
   }
-
   .about-paragraph {
     width: 50%;
   }
@@ -269,6 +296,7 @@ button[type="submit"] {
 
   button[type="submit"] {
     width: fit-content;
+    cursor: pointer;
   }
 
   form {
