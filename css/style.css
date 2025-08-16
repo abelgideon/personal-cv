@@ -210,8 +210,9 @@ tr:nth-of-type(2n) {
   gap: 3rem;
 }
 
-.project-collection li::marker {
-  font-size: 2rem;
+.project-collection > li::marker {
+  color: #00a8e7;
+  font-size: 1.3rem;
 }
 
 .project-img {
@@ -221,6 +222,10 @@ tr:nth-of-type(2n) {
 
 .tech-paragraph {
   margin: 1rem 0;
+}
+
+.project-description {
+  list-style-type: disc;
 }
 
 #project-buttons {
