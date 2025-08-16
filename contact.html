@@ -11,64 +11,78 @@
       src="https://kit.fontawesome.com/f1d125adc2.js"
       crossorigin="anonymous"
     ></script>
-    <nav>
-      <ul>
-        <li><a class="nav-links" href="./index.html">Home</a></li>
-        <li><a class="nav-links" href="./about.html">About</a></li>
-        <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
-        <li><a class="nav-links" href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <main>
-      <h1 class="main-heading">Get in Touch</h1>
-      <form action="">
-        <div>
-          <label for="name">Name</label>
-          <input placeholder="John Doe" type="text" name="name" id="name" />
+    <label id="toggle-label" for="theme-toggle"
+      ><img id="toggle-img" src="./images/theme-logo.png" alt=""
+    /></label>
+    <input type="checkbox" id="theme-toggle" />
+    <div class="content">
+      <nav>
+        <ul>
+          <li><a class="nav-links" href="./index.html">Home</a></li>
+          <li><a class="nav-links" href="./about.html">About</a></li>
+          <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
+          <li><a class="nav-links" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1 class="main-heading">Get in Touch</h1>
+        <form action="">
+          <div>
+            <label for="name">Name</label>
+            <input
+              class="form-input"
+              placeholder="John Doe"
+              type="text"
+              name="name"
+              id="name"
+            />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              class="form-input"
+              placeholder="johndoe@gmail.com"
+              type="email"
+              id="email"
+              name="email"
+            />
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea
+              class="form-input"
+              placeholder="Enter your message here..."
+              name="message"
+              id="message"
+            ></textarea>
+          </div>
+          <button class="green-btn" type="submit">Send Message</button>
+        </form>
+        <p class="divider">OR</p>
+        <div class="social-cards">
+          <a class="social-card" href="https://t.me/Abel007" target="_blank"
+            ><i class="fa-brands fa-telegram card icons"></i
+          ></a>
+          <a
+            class="social-card"
+            href="https://github.com/abelgideon"
+            target="_blank"
+            ><i class="fa-brands fa-github card icons"></i
+          ></a>
+          <a
+            class="social-card"
+            href="mailto:abelgideontk7@gmail.com"
+            target="_blank"
+            ><i class="fa-solid fa-envelope card icons"></i
+          ></a>
+          <a
+            class="social-card"
+            href="https://linkedin.com/in/abelgideon"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin card icons"></i
+          ></a>
         </div>
-        <div>
-          <label for="email">Email</label>
-          <input
-            placeholder="johndoe@gmail.com"
-            type="email"
-            id="email"
-            name="email"
-          />
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea
-            placeholder="Enter your message here..."
-            name="message"
-            id="message"
-          ></textarea>
-        </div>
-        <button class="green-btn" type="submit">Send Message</button>
-      </form>
-      <p class="divider">OR</p>
-      <div class="social-cards">
-        <a class="social-card" href="https://t.me/Abel007" target="_blank"
-          ><i class="fa-brands fa-telegram card icons"></i
-        ></a>
-        <a
-          class="social-card"
-          href="https://github.com/abelgideon"
-          target="_blank"
-          ><i class="fa-brands fa-github card icons"></i
-        ></a>
-        <a
-          class="social-card"
-          href="mailto:abelgideontk7@gmail.com"
-          target="_blank"
-          ><i class="fa-solid fa-envelope card icons"></i
-        ></a>
-        <a
-          class="social-card"
-          href="https://linkedin.com/in/abelgideon"
-          target="_blank"
-          ><i class="fa-brands fa-linkedin card icons"></i
-        ></a>
-      </div>
-    </main>
+      </main>
+    </div>
   </body>
 </html>

@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
 
+:root {
+  --bg-color: #fff;
+  --darker-bg-color: #eeeeee;
+  --text-color: #18181b;
+  --table-row-color: #fefefe;
+  --table-bg-color: #fafafa;
+}
+
 *:not(i) {
   margin: 0;
   padding: 0;
@@ -7,12 +15,38 @@
   font-family: "Geist", "sans-serif";
 }
 
-body {
-  background-color: #1d232a;
+#theme-toggle:checked ~ .content {
+  --bg-color: #1d232a;
+  --darker-bg-color: #15191e;
+  --text-color: #fff;
+  --table-row-color: #22272d;
+  --table-bg-color: #252a30;
+}
+
+#theme-toggle {
+  display: none;
+}
+
+#toggle-label {
+  position: fixed;
+  top: 0.8rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#toggle-img {
+  width: 35px;
+  height: 35px;
+}
+
+.content {
+  background-color: var(--bg-color);
+  min-height: 100vh;
 }
 
 main {
-  color: white;
+  color: var(--text-color);
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -33,7 +67,7 @@ main {
 }
 
 nav {
-  background-color: #15191e;
+  background-color: var(--darker-bg-color);
   padding: 20px;
   position: fixed;
   width: 100%;
@@ -42,14 +76,13 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   list-style-type: none;
 }
 
 .nav-links {
   text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
+  color: var(--text-color);
 }
 
 #home-header {
@@ -67,7 +100,7 @@ nav ul {
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 .purple-btn {
@@ -103,7 +136,7 @@ nav ul {
   border-left: #605dff solid 10px;
   border-radius: 10px;
   padding: 20px;
-  background-color: #15191e;
+  background-color: var(--darker-bg-color);
 }
 
 .card {
@@ -121,7 +154,7 @@ nav ul {
 
 table {
   width: 100%;
-  background-color: #252a30;
+  background-color: var(--table-bg-color);
   border-collapse: collapse;
 }
 
@@ -132,11 +165,11 @@ td {
 }
 
 th {
-  background-color: #15191e;
+  background-color: var(--darker-bg-color);
 }
 
 tr:nth-of-type(2n) {
-  background-color: #22272d;
+  background-color: var(--table-row-color);
 }
 
 .table-container {
@@ -164,13 +197,13 @@ tr:nth-of-type(2n) {
   margin-bottom: 1rem;
 }
 
-input,
-textarea {
+.form-input {
   width: 100%;
   padding: 1rem;
   border-radius: 6px;
   margin-bottom: 1rem;
   font-size: 1.1rem;
+  border: 1px solid #000;
 }
 
 button[type="submit"] {
@@ -202,6 +235,9 @@ button[type="submit"] {
 }
 
 @media (min-width: 768px) {
+  nav ul {
+    gap: 30px;
+  }
   .paragraph-group {
     flex-direction: row;
   }
