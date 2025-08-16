@@ -10,6 +10,8 @@
 }
 
 #theme-toggle:checked ~ .content {
+  opacity: 1;
+  animation: none;
   --bg-color: #1d232a;
   --darker-bg-color: #15191e;
   --text-color: #fff;
