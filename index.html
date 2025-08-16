@@ -4,52 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/a-icon.PNG" type="image/PNG" />
+    <script>
+      // Immediately apply dark mode if saved in localStorage
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+      }
+    </script>
     <link rel="stylesheet" href="./css/style.css" />
     <title>Abel Gideon</title>
   </head>
   <body>
-    <!-- toggle theme using a checkbox -->
-    <!-- theme doesn't persist across pages since we're not storing the user's preference somewhere -->
-    <input type="checkbox" id="theme-toggle" />
-
-    <!-- content wrapper used to apply theme using only CSS -->
-    <div class="content">
-      <nav>
-        <ul>
-          <!-- Navigation links 'active' indicates the current page -->
-          <div class="page-nav">
-            <li><a class="nav-links active" href="./index.html">Home</a></li>
-            <li><a class="nav-links" href="./about.html">About</a></li>
-            <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="nav-links" href="./contact.html">Contact</a></li>
-          </div>
-          <div>
-            <!-- label for the theme toggler -->
-            <label id="toggle-label" for="theme-toggle">
-              <img
-                id="toggle-img"
-                src="./images/theme-logo.png"
-                alt="theme changer logo"
-              />
-            </label>
-          </div>
-        </ul>
-      </nav>
-
-      <!-- Main section for homepage content -->
-      <main id="home-main">
-        <h1 id="home-header">Hey I am Abel</h1>
-        <p id="home-paragraph">
-          A full stack web developer specializing in the MERN stack and Next.js
-        </p>
-
-        <!-- Buttons linking to portfolio and contact pages -->
-        <div class="button-container">
-          <a class="purple-btn" href="./portfolio.html">View Portfolio</a>
-          <a class="green-btn" href="./contact.html">Contact Me</a>
+    <nav>
+      <ul>
+        <!-- Navigation links 'active' indicates the current page -->
+        <div class="page-nav">
+          <li><a class="nav-links active" href="./index.html">Home</a></li>
+          <li><a class="nav-links" href="./about.html">About</a></li>
+          <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
+          <li><a class="nav-links" href="./contact.html">Contact</a></li>
         </div>
-      </main>
-    </div>
+        <div>
+          <!-- button for the theme toggler -->
+          <i id="theme-toggle-btn" class="fa-solid fa-circle-half-stroke"></i>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- Main section for homepage content -->
+    <main id="home-main">
+      <h1 id="home-header">Hey I am Abel</h1>
+      <p id="home-paragraph">
+        A full stack web developer specializing in the MERN stack and Next.js
+      </p>
+
+      <!-- Buttons linking to portfolio and contact pages -->
+      <div class="button-container">
+        <a class="purple-btn" href="./portfolio.html">View Portfolio</a>
+        <a class="green-btn" href="./contact.html">Contact Me</a>
+      </div>
+    </main>
     <script src="./js/theme.js"></script>
+    <!-- Loads font awesome icons used for social media icons -->
+    <script
+      src="https://kit.fontawesome.com/f1d125adc2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

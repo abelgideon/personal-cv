@@ -4,116 +4,108 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/a-icon.PNG" type="image/PNG" />
+    <script>
+      // Immediately apply dark mode if saved in localStorage
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+      }
+    </script>
     <link rel="stylesheet" href="./css/style.css" />
     <title>Abel Gideon</title>
   </head>
   <body>
+    <nav>
+      <ul>
+        <!-- Navigation links 'active' indicates the current page -->
+        <div class="page-nav">
+          <li><a class="nav-links" href="./index.html">Home</a></li>
+          <li><a class="nav-links" href="./about.html">About</a></li>
+          <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
+          <li>
+            <a class="nav-links active" href="./contact.html">Contact</a>
+          </li>
+        </div>
+        <div>
+          <!-- button for the theme toggler -->
+          <i id="theme-toggle-btn" class="fa-solid fa-circle-half-stroke"></i>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- Main page content -->
+    <main>
+      <h1 class="main-heading">Get in Touch</h1>
+      <!-- Contact form for sending a message -->
+      <!-- Currently doesn't work since backend is not setup -->
+      <form action="/form-submission" method="POST">
+        <div>
+          <label for="name">Name</label>
+          <input
+            class="form-input"
+            placeholder="John Doe"
+            type="text"
+            name="name"
+            id="name"
+          />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input
+            class="form-input"
+            placeholder="johndoe@gmail.com"
+            type="email"
+            id="email"
+            name="email"
+          />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            class="form-input"
+            placeholder="Enter your message here..."
+            name="message"
+            id="message"
+          ></textarea>
+        </div>
+        <!-- Disabled for now since there's no backend -->
+        <button disabled class="green-btn" type="submit">Send Message</button>
+      </form>
+
+      <p class="divider">OR</p>
+
+      <!-- Social media contact links -->
+      <div class="social-cards">
+        <a class="social-card" href="https://t.me/Abel007" target="_blank">
+          <i class="fa-brands fa-telegram card icons"></i>
+        </a>
+        <a
+          class="social-card"
+          href="https://github.com/abelgideon"
+          target="_blank"
+        >
+          <i class="fa-brands fa-github card icons"></i>
+        </a>
+        <a
+          class="social-card"
+          href="mailto:abelgideontk7@gmail.com"
+          target="_blank"
+        >
+          <i class="fa-solid fa-envelope card icons"></i>
+        </a>
+        <a
+          class="social-card"
+          href="https://linkedin.com/in/abelgideon"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin card icons"></i>
+        </a>
+      </div>
+    </main>
+    <script src="./js/theme.js"></script>
     <!-- Loads font awesome icons used for social media icons -->
     <script
       src="https://kit.fontawesome.com/f1d125adc2.js"
       crossorigin="anonymous"
     ></script>
-
-    <!-- toggle theme using a checkbox -->
-    <!-- theme doesn't persist across pages since we're not storing the user's preference somewhere -->
-    <input type="checkbox" id="theme-toggle" />
-
-    <!-- content wrapper used to apply theme using only CSS -->
-    <div class="content">
-      <nav>
-        <ul>
-          <!-- Navigation links 'active' indicates the current page -->
-          <div class="page-nav">
-            <li><a class="nav-links" href="./index.html">Home</a></li>
-            <li><a class="nav-links" href="./about.html">About</a></li>
-            <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
-            <li>
-              <a class="nav-links active" href="./contact.html">Contact</a>
-            </li>
-          </div>
-          <div>
-            <!-- label for the theme toggler -->
-            <label id="toggle-label" for="theme-toggle">
-              <img
-                id="toggle-img"
-                src="./images/theme-logo.png"
-                alt="theme changer logo"
-              />
-            </label>
-          </div>
-        </ul>
-      </nav>
-
-      <!-- Main page content -->
-      <main>
-        <h1 class="main-heading">Get in Touch</h1>
-        <!-- Contact form for sending a message -->
-        <!-- Currently doesn't work since backend is not setup -->
-        <form action="/form-submission" method="POST">
-          <div>
-            <label for="name">Name</label>
-            <input
-              class="form-input"
-              placeholder="John Doe"
-              type="text"
-              name="name"
-              id="name"
-            />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input
-              class="form-input"
-              placeholder="johndoe@gmail.com"
-              type="email"
-              id="email"
-              name="email"
-            />
-          </div>
-          <div>
-            <label for="message">Message</label>
-            <textarea
-              class="form-input"
-              placeholder="Enter your message here..."
-              name="message"
-              id="message"
-            ></textarea>
-          </div>
-          <!-- Disabled for now since there's no backend -->
-          <button disabled class="green-btn" type="submit">Send Message</button>
-        </form>
-
-        <p class="divider">OR</p>
-
-        <!-- Social media contact links -->
-        <div class="social-cards">
-          <a class="social-card" href="https://t.me/Abel007" target="_blank">
-            <i class="fa-brands fa-telegram card icons"></i>
-          </a>
-          <a
-            class="social-card"
-            href="https://github.com/abelgideon"
-            target="_blank"
-          >
-            <i class="fa-brands fa-github card icons"></i>
-          </a>
-          <a
-            class="social-card"
-            href="mailto:abelgideontk7@gmail.com"
-            target="_blank"
-          >
-            <i class="fa-solid fa-envelope card icons"></i>
-          </a>
-          <a
-            class="social-card"
-            href="https://linkedin.com/in/abelgideon"
-            target="_blank"
-          >
-            <i class="fa-brands fa-linkedin card icons"></i>
-          </a>
-        </div>
-      </main>
-    </div>
-    <script src="./js/theme.js"></script>
   </body>
 </html>

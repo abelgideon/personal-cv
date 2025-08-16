@@ -1,9 +1,17 @@
-const themeToggle = document.getElementById("theme-toggle");
+const toggleBtn = document.getElementById("theme-toggle-btn");
 
+// Apply saved theme on load
 if (localStorage.getItem("theme") === "dark") {
-  themeToggle.checked = true;
+  document.documentElement.classList.add("dark-mode");
 }
 
-themeToggle.addEventListener("change", () => {
-  localStorage.setItem("theme", themeToggle.checked ? "dark" : "light");
+// Toggle theme on button click
+toggleBtn.addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark-mode");
+  // Save preference
+  if (document.documentElement.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });

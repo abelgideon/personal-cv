@@ -4,277 +4,268 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/a-icon.PNG" type="image/PNG" />
+    <script>
+      // Immediately apply dark mode if saved in localStorage
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+      }
+    </script>
     <link rel="stylesheet" href="./css/style.css" />
     <title>Abel Gideon</title>
   </head>
   <body>
-    <!-- toggle theme using a checkbox -->
-    <input type="checkbox" id="theme-toggle" />
+    <nav>
+      <ul>
+        <!-- Navigation links 'active' indicates the current page -->
+        <div class="page-nav">
+          <li><a class="nav-links" href="./index.html">Home</a></li>
+          <li><a class="nav-links" href="./about.html">About</a></li>
+          <li>
+            <a class="nav-links active" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li><a class="nav-links" href="./contact.html">Contact</a></li>
+        </div>
+        <div>
+          <!-- button for the theme toggler -->
+          <i id="theme-toggle-btn" class="fa-solid fa-circle-half-stroke"></i>
+        </div>
+      </ul>
+    </nav>
 
-    <!-- content wrapper used to apply theme using only CSS -->
-    <!-- theme doesn't persist across pages since we're not storing the user's preference somewhere -->
-    <div class="content">
-      <nav>
-        <ul>
-          <!-- Navigation links 'active' indicates the current page -->
-          <div class="page-nav">
-            <li><a class="nav-links" href="./index.html">Home</a></li>
-            <li><a class="nav-links" href="./about.html">About</a></li>
+    <!-- Main page content -->
+    <main>
+      <h1 class="main-heading">My Projects</h1>
+      <!-- Ordered list of projects -->
+      <ol class="project-collection">
+        <!-- Project 1: Job Tracker -->
+        <li>
+          <h2 class="sub-heading">Job Tracker</h2>
+          <img
+            class="project-img"
+            src="./images/job-manager.png"
+            alt="screenshot of job manager app"
+          />
+          <p class="tech-paragraph">
+            <strong>Technologies used:</strong> Node.js Express.js MongoDB
+            React.js JWT
+          </p>
+          <p class="paragraph-card">
+            A full-stack web application for managing job applications.
+          </p>
+          <ul class="project-description">
             <li>
-              <a class="nav-links active" href="./portfolio.html">Portfolio</a>
+              Developed a Full Stack job tracking application using Node.js and
+              React.js.
             </li>
-            <li><a class="nav-links" href="./contact.html">Contact</a></li>
+            <li>
+              Built a RESTful API with CRUD functionality and JWT
+              authentication.
+            </li>
+            <li>
+              Managed data persistence with MongoDB and version control with
+              Git/GitHub.
+            </li>
+            <li>
+              Created a responsive frontend with React.js and React Router.
+            </li>
+          </ul>
+          <div id="project-buttons" class="button-container">
+            <a
+              target="_blank"
+              class="purple-btn"
+              href="https://job-manager-1ix9.vercel.app/"
+              >View Live</a
+            >
+            <a
+              target="_blank"
+              class="green-btn"
+              href="https://github.com/abelgideon/Job-Manager"
+              >View Code</a
+            >
           </div>
-          <div>
-            <!-- label for the theme toggler -->
-            <label id="toggle-label" for="theme-toggle">
-              <img
-                id="toggle-img"
-                src="./images/theme-logo.png"
-                alt="theme changer logo"
-              />
-            </label>
+        </li>
+
+        <!-- Project 2: Task Manager -->
+        <li>
+          <h2 class="sub-heading">Task Manager</h2>
+          <img
+            class="project-img"
+            src="./images/task-manager.png"
+            alt="screenshot of task manager app"
+          />
+          <p class="tech-paragraph">
+            <strong>Technologies used:</strong> Node.js Express.js MongoDB
+            React.js Tailwind
+          </p>
+          <p class="paragraph-card">
+            A full-stack task management application built with the MERN stack.
+          </p>
+          <ul class="project-description">
+            <li>Built with Node.js and React.js for task management.</li>
+            <li>Developed a RESTful API with CRUD support.</li>
+            <li>Frontend styled with React Router and Tailwind CSS.</li>
+            <li>
+              Utilized MongoDB for data persistence and Git/GitHub for version
+              control.
+            </li>
+          </ul>
+          <div id="project-buttons" class="button-container">
+            <a
+              target="_blank"
+              class="purple-btn"
+              href="https://task-manager-og9q.vercel.app/"
+              >View Live</a
+            >
+            <a
+              target="_blank"
+              class="green-btn"
+              href="https://github.com/abelgideon/Task-Manager"
+              >View Code</a
+            >
           </div>
-        </ul>
-      </nav>
+        </li>
 
-      <!-- Main page content -->
-      <main>
-        <h1 class="main-heading">My Projects</h1>
-        <!-- Ordered list of projects -->
-        <ol class="project-collection">
-          <!-- Project 1: Job Tracker -->
-          <li>
-            <h2 class="sub-heading">Job Tracker</h2>
-            <img
-              class="project-img"
-              src="./images/job-manager.png"
-              alt="screenshot of job manager app"
-            />
-            <p class="tech-paragraph">
-              <strong>Technologies used:</strong> Node.js Express.js MongoDB
-              React.js JWT
-            </p>
-            <p class="paragraph-card">
-              A full-stack web application for managing job applications.
-            </p>
-            <ul class="project-description">
-              <li>
-                Developed a Full Stack job tracking application using Node.js
-                and React.js.
-              </li>
-              <li>
-                Built a RESTful API with CRUD functionality and JWT
-                authentication.
-              </li>
-              <li>
-                Managed data persistence with MongoDB and version control with
-                Git/GitHub.
-              </li>
-              <li>
-                Created a responsive frontend with React.js and React Router.
-              </li>
-            </ul>
-            <div id="project-buttons" class="button-container">
-              <a
-                target="_blank"
-                class="purple-btn"
-                href="https://job-manager-1ix9.vercel.app/"
-                >View Live</a
-              >
-              <a
-                target="_blank"
-                class="green-btn"
-                href="https://github.com/abelgideon/Job-Manager"
-                >View Code</a
-              >
-            </div>
-          </li>
+        <!-- Project 3: Markdown Previewer -->
+        <li>
+          <h2 class="sub-heading">Markdown Previewer</h2>
+          <img
+            class="project-img"
+            src="./images/markdown-previewer.png"
+            alt="screenshot of markdown previewer app"
+          />
+          <p class="tech-paragraph">
+            <strong>Technologies used:</strong> React.js Marked.js Bootstrap
+          </p>
+          <p class="paragraph-card">
+            Allows users to write and preview GitHub-flavored markdown in
+            real-time.
+          </p>
+          <ul class="project-description">
+            <li>Developed a markdown preview tool with React.js components.</li>
+            <li>Integrated Marked.js for parsing GitHub-flavored markdown.</li>
+            <li>Designed a responsive split-panel interface with Bootstrap.</li>
+            <li>Deployed to Vercel for public access.</li>
+          </ul>
+          <div id="project-buttons" class="button-container">
+            <a
+              target="_blank"
+              class="purple-btn"
+              href="https://markdown-previewer-khaki-mu.vercel.app/"
+              >View Live</a
+            >
+            <a
+              target="_blank"
+              class="green-btn"
+              href="https://github.com/abelgideon/Markdown-Previewer"
+              >View Code</a
+            >
+          </div>
+        </li>
 
-          <!-- Project 2: Task Manager -->
-          <li>
-            <h2 class="sub-heading">Task Manager</h2>
-            <img
-              class="project-img"
-              src="./images/task-manager.png"
-              alt="screenshot of task manager app"
-            />
-            <p class="tech-paragraph">
-              <strong>Technologies used:</strong> Node.js Express.js MongoDB
-              React.js Tailwind
-            </p>
-            <p class="paragraph-card">
-              A full-stack task management application built with the MERN
-              stack.
-            </p>
-            <ul class="project-description">
-              <li>Built with Node.js and React.js for task management.</li>
-              <li>Developed a RESTful API with CRUD support.</li>
-              <li>Frontend styled with React Router and Tailwind CSS.</li>
-              <li>
-                Utilized MongoDB for data persistence and Git/GitHub for version
-                control.
-              </li>
-            </ul>
-            <div id="project-buttons" class="button-container">
-              <a
-                target="_blank"
-                class="purple-btn"
-                href="https://task-manager-og9q.vercel.app/"
-                >View Live</a
-              >
-              <a
-                target="_blank"
-                class="green-btn"
-                href="https://github.com/abelgideon/Task-Manager"
-                >View Code</a
-              >
-            </div>
-          </li>
+        <!-- Project 4: Administration Bot -->
+        <li>
+          <h2 class="sub-heading">Administration Bot</h2>
+          <img
+            class="project-img"
+            src="./images/administration-bot.png"
+            alt="screenshot of administration bot"
+          />
+          <p class="tech-paragraph">
+            <strong>Technologies used:</strong> Node.js Telegraf Sequelize
+            PostgreSQL dotenv
+          </p>
+          <p class="paragraph-card">
+            A bot that supports user registration, admin functionalities, and
+            user management.
+          </p>
+          <ul class="project-description">
+            <li>
+              Created a Telegram bot using Node.js, Telegraf, and Sequelize.
+            </li>
+            <li>Implemented PostgreSQL for managing users.</li>
+            <li>
+              Structured command-based interactions with admin/user workflows.
+            </li>
+            <li>Used Git and GitHub for version control.</li>
+          </ul>
+          <div id="project-buttons" class="button-container">
+            <a
+              target="_blank"
+              class="purple-btn"
+              href="https://t.me/UserAdministrationBot"
+              >View Live</a
+            >
+            <a
+              target="_blank"
+              class="green-btn"
+              href="https://github.com/abelgideon/Administration-Telegram-Bot"
+              >View Code</a
+            >
+          </div>
+        </li>
 
-          <!-- Project 3: Markdown Previewer -->
-          <li>
-            <h2 class="sub-heading">Markdown Previewer</h2>
-            <img
-              class="project-img"
-              src="./images/markdown-previewer.png"
-              alt="screenshot of markdown previewer app"
-            />
-            <p class="tech-paragraph">
-              <strong>Technologies used:</strong> React.js Marked.js Bootstrap
-            </p>
-            <p class="paragraph-card">
-              Allows users to write and preview GitHub-flavored markdown in
-              real-time.
-            </p>
-            <ul class="project-description">
-              <li>
-                Developed a markdown preview tool with React.js components.
-              </li>
-              <li>
-                Integrated Marked.js for parsing GitHub-flavored markdown.
-              </li>
-              <li>
-                Designed a responsive split-panel interface with Bootstrap.
-              </li>
-              <li>Deployed to Vercel for public access.</li>
-            </ul>
-            <div id="project-buttons" class="button-container">
-              <a
-                target="_blank"
-                class="purple-btn"
-                href="https://markdown-previewer-khaki-mu.vercel.app/"
-                >View Live</a
-              >
-              <a
-                target="_blank"
-                class="green-btn"
-                href="https://github.com/abelgideon/Markdown-Previewer"
-                >View Code</a
-              >
-            </div>
-          </li>
+        <!-- Project 5: Car Backend -->
+        <li>
+          <h2 class="sub-heading">Car Backend</h2>
+          <p class="tech-paragraph">
+            <strong>Technologies used:</strong> Node.js Express.js MongoDB
+            Mongoose dotenv
+          </p>
+          <p class="paragraph-card">
+            A Node.js backend API for managing car data.
+          </p>
+          <ul class="project-description">
+            <li>
+              Developed a RESTful API with querying, sorting, and pagination.
+            </li>
+            <li>Implemented CRUD functionality with MongoDB and Mongoose.</li>
+            <li>
+              Organized backend using controllers, routes, models, and
+              middlewares.
+            </li>
+            <li>Version control handled with Git and GitHub.</li>
+          </ul>
+          <div id="project-buttons" class="button-container">
+            <a
+              target="_blank"
+              class="green-btn"
+              href="https://github.com/abelgideon/Car-Backend"
+              >View Code</a
+            >
+          </div>
+        </li>
 
-          <!-- Project 4: Administration Bot -->
-          <li>
-            <h2 class="sub-heading">Administration Bot</h2>
-            <img
-              class="project-img"
-              src="./images/administration-bot.png"
-              alt="screenshot of administration bot"
-            />
-            <p class="tech-paragraph">
-              <strong>Technologies used:</strong> Node.js Telegraf Sequelize
-              PostgreSQL dotenv
-            </p>
-            <p class="paragraph-card">
-              A bot that supports user registration, admin functionalities, and
-              user management.
-            </p>
-            <ul class="project-description">
-              <li>
-                Created a Telegram bot using Node.js, Telegraf, and Sequelize.
-              </li>
-              <li>Implemented PostgreSQL for managing users.</li>
-              <li>
-                Structured command-based interactions with admin/user workflows.
-              </li>
-              <li>Used Git and GitHub for version control.</li>
-            </ul>
-            <div id="project-buttons" class="button-container">
-              <a
-                target="_blank"
-                class="purple-btn"
-                href="https://t.me/UserAdministrationBot"
-                >View Live</a
-              >
-              <a
-                target="_blank"
-                class="green-btn"
-                href="https://github.com/abelgideon/Administration-Telegram-Bot"
-                >View Code</a
-              >
-            </div>
-          </li>
-
-          <!-- Project 5: Car Backend -->
-          <li>
-            <h2 class="sub-heading">Car Backend</h2>
-            <p class="tech-paragraph">
-              <strong>Technologies used:</strong> Node.js Express.js MongoDB
-              Mongoose dotenv
-            </p>
-            <p class="paragraph-card">
-              A Node.js backend API for managing car data.
-            </p>
-            <ul class="project-description">
-              <li>
-                Developed a RESTful API with querying, sorting, and pagination.
-              </li>
-              <li>Implemented CRUD functionality with MongoDB and Mongoose.</li>
-              <li>
-                Organized backend using controllers, routes, models, and
-                middlewares.
-              </li>
-              <li>Version control handled with Git and GitHub.</li>
-            </ul>
-            <div id="project-buttons" class="button-container">
-              <a
-                target="_blank"
-                class="green-btn"
-                href="https://github.com/abelgideon/Car-Backend"
-                >View Code</a
-              >
-            </div>
-          </li>
-
-          <!-- Project 6: Code with Abel -->
-          <li>
-            <h2 class="sub-heading">Code with Abel</h2>
-            <p class="paragraph-card">
-              A YouTube channel dedicated to providing high-quality content on
-              Python, JavaScript, C++, and web development.
-            </p>
-            <ul class="project-description">
-              <li>Created videos on Full Stack MERN applications.</li>
-              <li>Taught backend development concepts such as RESTful APIs.</li>
-              <li>
-                Built a community by sharing hands-on coding projects
-                consistently.
-              </li>
-            </ul>
-            <div id="project-buttons" class="button-container">
-              <a
-                target="_blank"
-                class="green-btn"
-                href="https://www.youtube.com/@code-with-abel"
-                >View Channel</a
-              >
-            </div>
-          </li>
-        </ol>
-      </main>
-    </div>
+        <!-- Project 6: Code with Abel -->
+        <li>
+          <h2 class="sub-heading">Code with Abel</h2>
+          <p class="paragraph-card">
+            A YouTube channel dedicated to providing high-quality content on
+            Python, JavaScript, C++, and web development.
+          </p>
+          <ul class="project-description">
+            <li>Created videos on Full Stack MERN applications.</li>
+            <li>Taught backend development concepts such as RESTful APIs.</li>
+            <li>
+              Built a community by sharing hands-on coding projects
+              consistently.
+            </li>
+          </ul>
+          <div id="project-buttons" class="button-container">
+            <a
+              target="_blank"
+              class="green-btn"
+              href="https://www.youtube.com/@code-with-abel"
+              >View Channel</a
+            >
+          </div>
+        </li>
+      </ol>
+    </main>
     <script src="./js/theme.js"></script>
+    <!-- Loads font awesome icons used for social media icons -->
+    <script
+      src="https://kit.fontawesome.com/f1d125adc2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
