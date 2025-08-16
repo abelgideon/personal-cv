@@ -10,8 +10,6 @@
 }
 
 #theme-toggle:checked ~ .content {
-  opacity: 1;
-  animation: none;
   --bg-color: #1d232a;
   --darker-bg-color: #15191e;
   --text-color: #fff;
@@ -42,14 +40,6 @@
 .content {
   background-color: var(--bg-color);
   min-height: 100vh;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
 }
 
 main {
