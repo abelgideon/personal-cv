@@ -223,6 +223,10 @@ tr:nth-of-type(2n) {
   margin: 1rem 0;
 }
 
+#project-buttons {
+  justify-content: flex-start;
+}
+
 /* Form Properties */
 .form-input {
   width: 100%;
