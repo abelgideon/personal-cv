@@ -8,20 +8,26 @@
     <title>Abel Gideon</title>
   </head>
   <body>
-    <label id="toggle-label" for="theme-toggle"
-      ><img id="toggle-img" src="./images/theme-logo.png" alt=""
-    /></label>
+    <!-- toggle theme using a checkbox -->
+    <label id="toggle-label" for="theme-toggle">
+      <img id="toggle-img" src="./images/theme-logo.png" alt="" />
+    </label>
     <input type="checkbox" id="theme-toggle" />
+
+    <!-- content wrapper used to apply theme using only CSS -->
     <div class="content">
       <nav>
         <ul>
+          <!-- Navigation links 'active' marks the current page -->
           <li><a class="nav-links" href="./index.html">Home</a></li>
           <li><a class="nav-links active" href="./about.html">About</a></li>
           <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
           <li><a class="nav-links" href="./contact.html">Contact</a></li>
         </ul>
       </nav>
+
       <main>
+        <!-- About Me section -->
         <section>
           <h1 class="main-heading">About Me</h1>
           <div class="paragraph-group">
@@ -38,12 +44,15 @@
             </p>
           </div>
         </section>
+
+        <!-- Education and Skills section -->
         <section>
           <h2 class="sub-heading">Education</h2>
           <div class="card">
             <p>BSc in Software Engineering, HiLCoE</p>
             <p>Expected Graduation: 2027</p>
           </div>
+
           <h2 class="sub-heading">Skills</h2>
           <div class="card-collection">
             <p class="card">HTML & CSS</p>
@@ -56,15 +65,19 @@
             <p class="card">Nextjs</p>
           </div>
         </section>
+
+        <!-- Certifications section -->
         <section>
           <h2 class="sub-heading">Certifications</h2>
           <div class="table-container">
             <table>
+              <!-- Table for listing certifications -->
               <tr>
                 <th>Certification</th>
                 <th>Issued By</th>
                 <th>Issue Date</th>
               </tr>
+              <!-- Certification entries -->
               <tr>
                 <td>Networking Basics</td>
                 <td>Cisco</td>

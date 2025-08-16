@@ -8,13 +8,17 @@
     <title>Abel Gideon</title>
   </head>
   <body>
-    <label id="toggle-label" for="theme-toggle"
-      ><img id="toggle-img" src="./images/theme-logo.png" alt=""
-    /></label>
+    <!-- toggle theme using a checkbox -->
+    <label id="toggle-label" for="theme-toggle">
+      <img id="toggle-img" src="./images/theme-logo.png" alt="" />
+    </label>
     <input type="checkbox" id="theme-toggle" />
+
+    <!-- content wrapper used to apply theme using only CSS -->
     <div class="content">
       <nav>
         <ul>
+          <!-- Navigation links with 'active' marking the current page -->
           <li><a class="nav-links" href="./index.html">Home</a></li>
           <li><a class="nav-links" href="./about.html">About</a></li>
           <li>
@@ -23,9 +27,13 @@
           <li><a class="nav-links" href="./contact.html">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Main page content -->
       <main>
         <h1 class="main-heading">My Projects</h1>
+        <!-- Ordered list of projects -->
         <ol class="project-collection">
+          <!-- Project 1: Job Tracker -->
           <li>
             <h2 class="sub-heading">Job Tracker</h2>
             <img
@@ -43,18 +51,18 @@
             <ul>
               <li>
                 Developed a Full Stack job tracking application using Node.js
-                and React.js
+                and React.js.
               </li>
               <li>
-                Built a RESTful API with full CRUD API Development and JWT-based
-                API Authentication.
+                Built a RESTful API with CRUD functionality and JWT
+                authentication.
               </li>
               <li>
-                Managed data persistence with MongoDB and maintained version
-                control using Git and GitHub.
+                Managed data persistence with MongoDB and version control with
+                Git/GitHub.
               </li>
               <li>
-                Created a responsive frontend using React.js and React Router.
+                Created a responsive frontend with React.js and React Router.
               </li>
             </ul>
             <div class="button-container">
@@ -72,6 +80,8 @@
               >
             </div>
           </li>
+
+          <!-- Project 2: Task Manager -->
           <li>
             <h2 class="sub-heading">Task Manager</h2>
             <img
@@ -88,20 +98,12 @@
               stack.
             </p>
             <ul>
+              <li>Built with Node.js and React.js for task management.</li>
+              <li>Developed a RESTful API with CRUD support.</li>
+              <li>Frontend styled with React Router and Tailwind CSS.</li>
               <li>
-                Built a Full Stack task management application using Node.js and
-                React.js.
-              </li>
-              <li>
-                Developed a RESTful API supporting full CRUD API Development.
-              </li>
-              <li>
-                Designed a responsive frontend with React.js, React Router, and
-                Tailwind CSS.
-              </li>
-              <li>
-                Utilized MongoDB for data persistence and managed code versions
-                with Git and GitHub.
+                Utilized MongoDB for data persistence and Git/GitHub for version
+                control.
               </li>
             </ul>
             <div class="button-container">
@@ -119,12 +121,14 @@
               >
             </div>
           </li>
+
+          <!-- Project 3: Markdown Previewer -->
           <li>
             <h2 class="sub-heading">Markdown Previewer</h2>
             <img
               class="project-img"
               src="./images/markdown-previewer.png"
-              alt="screenshot of task markdown previewer app"
+              alt="screenshot of markdown previewer app"
             />
             <p class="tech-paragraph">
               <strong>Technologies used:</strong> React.js Marked.js Bootstrap
@@ -135,18 +139,15 @@
             </p>
             <ul>
               <li>
-                Built a real-time markdown preview tool with React.js
-                components.
+                Developed a markdown preview tool with React.js components.
               </li>
               <li>
-                Integrated Marked.js to parse and render GitHub-flavored
-                markdown.
+                Integrated Marked.js for parsing GitHub-flavored markdown.
               </li>
               <li>
-                Designed a split-panel interface with responsive Bootstrap
-                layout.
+                Designed a responsive split-panel interface with Bootstrap.
               </li>
-              <li>Deployed to Vercel for instant web access.</li>
+              <li>Deployed to Vercel for public access.</li>
             </ul>
             <div class="button-container">
               <a
@@ -163,6 +164,8 @@
               >
             </div>
           </li>
+
+          <!-- Project 4: Administration Bot -->
           <li>
             <h2 class="sub-heading">Administration Bot</h2>
             <img
@@ -180,12 +183,11 @@
             </p>
             <ul>
               <li>
-                Built a Node.js Telegram bot using Telegraf and Sequelize.
+                Created a Telegram bot using Node.js, Telegraf, and Sequelize.
               </li>
-              <li>Implemented a PostgreSQL system to manage users.</li>
+              <li>Implemented PostgreSQL for managing users.</li>
               <li>
-                Designed command-based interactions using inline buttons and
-                structured admin/user workflows.
+                Structured command-based interactions with admin/user workflows.
               </li>
               <li>Used Git and GitHub for version control.</li>
             </ul>
@@ -204,6 +206,8 @@
               >
             </div>
           </li>
+
+          <!-- Project 5: Car Backend -->
           <li>
             <h2 class="sub-heading">Car Backend</h2>
             <p class="tech-paragraph">
@@ -215,17 +219,14 @@
             </p>
             <ul>
               <li>
-                Developed a RESTful API to manage car data with support for
-                querying, sorting, and pagination.
+                Developed a RESTful API with querying, sorting, and pagination.
               </li>
+              <li>Implemented CRUD functionality with MongoDB and Mongoose.</li>
               <li>
-                Implemented CRUD API Development with MongoDB and Mongoose.
-              </li>
-              <li>
-                Structured the backend using controllers, routes, models, and
+                Organized backend using controllers, routes, models, and
                 middlewares.
               </li>
-              <li>Used Git and GitHub for version control.</li>
+              <li>Version control handled with Git and GitHub.</li>
             </ul>
             <div class="button-container">
               <a
@@ -236,6 +237,8 @@
               >
             </div>
           </li>
+
+          <!-- Project 6: Code with Abel -->
           <li>
             <h2 class="sub-heading">Code with Abel</h2>
             <p class="paragraph-card">
@@ -243,17 +246,11 @@
               Python, JavaScript, C++, and web development.
             </p>
             <ul>
+              <li>Created videos on Full Stack MERN applications.</li>
+              <li>Taught backend development concepts such as RESTful APIs.</li>
               <li>
-                Created videos focused on building Full Stack applications using
-                the MERN stack.
-              </li>
-              <li>
-                Taught practical Backend Web Development concepts such as
-                RESTful API Development.
-              </li>
-              <li>
-                Grew a learning community by consistently sharing hands-on
-                coding projects.
+                Built a community by sharing hands-on coding projects
+                consistently.
               </li>
             </ul>
             <div class="button-container">

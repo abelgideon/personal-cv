@@ -8,25 +8,34 @@
     <title>Abel Gideon</title>
   </head>
   <body>
+    <!-- Loads font awesome icons used for social media icons -->
     <script
       src="https://kit.fontawesome.com/f1d125adc2.js"
       crossorigin="anonymous"
     ></script>
-    <label id="toggle-label" for="theme-toggle"
-      ><img id="toggle-img" src="./images/theme-logo.png" alt=""
-    /></label>
+
+    <!-- toggle theme using a checkbox -->
+    <label id="toggle-label" for="theme-toggle">
+      <img id="toggle-img" src="./images/theme-logo.png" alt="" />
+    </label>
     <input type="checkbox" id="theme-toggle" />
+
+    <!-- content wrapper used to apply theme using only CSS -->
     <div class="content">
       <nav>
         <ul>
+          <!-- Navigation links 'active' highlights current page -->
           <li><a class="nav-links" href="./index.html">Home</a></li>
           <li><a class="nav-links" href="./about.html">About</a></li>
           <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
           <li><a class="nav-links active" href="./contact.html">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Main page content -->
       <main>
         <h1 class="main-heading">Get in Touch</h1>
+        <!-- Contact form for sending a message -->
         <form action="">
           <div>
             <label for="name">Name</label>
@@ -59,29 +68,35 @@
           </div>
           <button class="green-btn" type="submit">Send Message</button>
         </form>
+
         <p class="divider">OR</p>
+
+        <!-- Social media contact links -->
         <div class="social-cards">
-          <a class="social-card" href="https://t.me/Abel007" target="_blank"
-            ><i class="fa-brands fa-telegram card icons"></i
-          ></a>
+          <a class="social-card" href="https://t.me/Abel007" target="_blank">
+            <i class="fa-brands fa-telegram card icons"></i>
+          </a>
           <a
             class="social-card"
             href="https://github.com/abelgideon"
             target="_blank"
-            ><i class="fa-brands fa-github card icons"></i
-          ></a>
+          >
+            <i class="fa-brands fa-github card icons"></i>
+          </a>
           <a
             class="social-card"
             href="mailto:abelgideontk7@gmail.com"
             target="_blank"
-            ><i class="fa-solid fa-envelope card icons"></i
-          ></a>
+          >
+            <i class="fa-solid fa-envelope card icons"></i>
+          </a>
           <a
             class="social-card"
             href="https://linkedin.com/in/abelgideon"
             target="_blank"
-            ><i class="fa-brands fa-linkedin card icons"></i
-          ></a>
+          >
+            <i class="fa-brands fa-linkedin card icons"></i>
+          </a>
         </div>
       </main>
     </div>
