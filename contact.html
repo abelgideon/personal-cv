@@ -15,20 +15,29 @@
     ></script>
 
     <!-- toggle theme using a checkbox -->
-    <label id="toggle-label" for="theme-toggle">
-      <img id="toggle-img" src="./images/theme-logo.png" alt="" />
-    </label>
     <input type="checkbox" id="theme-toggle" />
 
     <!-- content wrapper used to apply theme using only CSS -->
     <div class="content">
       <nav>
         <ul>
-          <!-- Navigation links 'active' highlights current page -->
-          <li><a class="nav-links" href="./index.html">Home</a></li>
-          <li><a class="nav-links" href="./about.html">About</a></li>
-          <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
-          <li><a class="nav-links active" href="./contact.html">Contact</a></li>
+          <!-- Navigation links 'active' indicates the current page -->
+          <div class="page-nav">
+            <li><a class="nav-links active" href="./index.html">Home</a></li>
+            <li><a class="nav-links" href="./about.html">About</a></li>
+            <li><a class="nav-links" href="./portfolio.html">Portfolio</a></li>
+            <li><a class="nav-links" href="./contact.html">Contact</a></li>
+          </div>
+          <div>
+            <!-- label for the theme toggler -->
+            <label id="toggle-label" for="theme-toggle">
+              <img
+                id="toggle-img"
+                src="./images/theme-logo.png"
+                alt="theme changer logo"
+              />
+            </label>
+          </div>
         </ul>
       </nav>
 
